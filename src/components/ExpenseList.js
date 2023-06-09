@@ -10,16 +10,17 @@ const ExpenseList = () => {
         <table className='table'>
               <thead className="thead-light">
             <tr>
-              <th scope="col">Items</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Unit Price</th>
-              <th scope="col">Items Price</th>
-              <th scope="col">Remove</th>
+              <th scope="col">Department</th>
+              <th scope="col">Allocated Budget</th>
+              <th scope="col">Increase dy 10</th>
+              <th scope="col">Decrease dy 10</th>
+              <th scope="col"> Remove </th>
+             
             </tr>
           </thead>
             <tbody>
             {expenses.map((expense) => (
-                <ExpenseItem id={expense.id} key={expense.id} name={expense.name} quantity={expense.quantity} unitprice={expense.unitprice} />
+                <ExpenseItem id={expense.id} key={expense.id} department={expense.department} AllocatedBudget={expense.AllocatedBudget} />
             ))}
             </tbody>
         </table>
